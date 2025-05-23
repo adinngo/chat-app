@@ -9,7 +9,7 @@ import org.vinhthang.chat_app.user.User;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "message_room")
+@Table(name = "message_room_member")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data

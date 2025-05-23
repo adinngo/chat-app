@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.engine.internal.Cascade;
 import org.vinhthang.chat_app.message_content.MessageContent;
 import org.vinhthang.chat_app.message_room.MessageRoom;
 import org.vinhthang.chat_app.message_room_member.MessageRoomMember;
@@ -14,7 +15,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
+@Table(name = "app_user")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -38,5 +39,8 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<MessageRoomMember> messageRoomMembers;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<MessageContent> messageContents;
 
 }

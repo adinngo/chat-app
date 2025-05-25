@@ -5,11 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.engine.internal.Cascade;
 import org.vinhthang.chat_app.message_content.MessageContent;
 import org.vinhthang.chat_app.message_room.MessageRoom;
 import org.vinhthang.chat_app.message_room_member.MessageRoomMember;
-import org.vinhthang.chat_app.user.UserStatus;
 
 import java.time.LocalDateTime;
 import java.util.List;
